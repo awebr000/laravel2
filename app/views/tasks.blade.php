@@ -55,7 +55,9 @@
 
 
                   <td>
-                        {{Form::open(['url' => 'task'.$task->id]);}}
+                        {{Form::open(['url' => "/task/{$task->id}"]);}}
+
+
                           <button type="submit" class="btn btn-danger">
                               <i class="fa fa-btn fa-trash"></i>Delete
                           </button>

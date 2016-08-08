@@ -48,8 +48,8 @@ return Redirect::to('/');
 });
 
 //Delete Task
-Route::delete('/task/{task}', function(Task $task){
-	$task->delete();
+Route::post('/task/{task}', function($task){
+	$del=Task::whereid($task)->delete();
 
 return Redirect::to('/');
 
